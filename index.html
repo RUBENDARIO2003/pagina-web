@@ -3,80 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <title>Catálogo Gamer</title>
-  <link rel="stylesheet" href="css/estilos.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #0f172a;
+      color: #e5e7eb;
+    }
+
+    header {
+      background: #020617;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #38bdf8;
+    }
+
+    .hero {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .game-card {
+      background: #020617;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 15px;
+    }
+
+    .info h3 {
+      margin-top: 0;
+      color: #38bdf8;
+    }
+
+    footer {
+      background: #020617;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+  </style>
 </head>
+
 <body>
 
-<div id="header"></div>
+<header>
+  <h1>Catálogo de Juegos Gamer</h1>
+</header>
 
 <section class="hero">
-  <h1>🎮 Catálogo de Juegos Gamer</h1>
-  <p>
-    Página informativa dedicada a<br>
-    los videojuegos más populares.
-  </p>
+  <p>Página informativa dedicada a los videojuegos más populares.</p>
 </section>
 
 <section class="catalogo">
 
+  <!-- JUEGO 1 -->
   <div class="game-card">
-    <img src="assets/img/game1.jpg" alt="Cyber Battle">
+    <img src="data:image/png;base64,PEGA_AQUI_TU_BASE64" alt="Cyber Battle">
     <div class="info">
       <h3>Cyber Battle</h3>
+      <p><strong>Género:</strong> Acción / Ciencia ficción</p>
+      <p><strong>Plataforma:</strong> PC, Consolas</p>
       <p>
-        <strong>Género:</strong> Acción / Ciencia ficción<br>
-        <strong>Plataforma:</strong> PC, Consolas
-      </p>
-      <p>
-        Juego ambientado en un mundo futurista donde
-        la estrategia y la acción se combinan.
+        Juego ambientado en un mundo futurista donde la estrategia y la acción se combinan.
       </p>
     </div>
   </div>
 
+  <!-- JUEGO 2 -->
   <div class="game-card">
-    <img src="assets/img/game2.jpg" alt="Night Racer">
+    <img src="data:image/png;base64,PEGA_AQUI_TU_BASE64" alt="Night Racer">
     <div class="info">
       <h3>Night Racer</h3>
+      <p><strong>Género:</strong> Carreras</p>
+      <p><strong>Plataforma:</strong> PC</p>
       <p>
-        <strong>Género:</strong> Carreras<br>
-        <strong>Plataforma:</strong> PC, Consolas
-      </p>
-      <p>
-        Carreras nocturnas con escenarios urbanos,
-        velocidad extrema y luces neón.
+        Carreras nocturnas llenas de adrenalina en una ciudad iluminada por neón.
       </p>
     </div>
   </div>
 
+  <!-- JUEGO 3 -->
   <div class="game-card">
-    <img src="assets/img/game3.jpg" alt="Time Quest">
+    <img src="data:image/png;base64,PEGA_AQUI_TU_BASE64" alt="Fantasy World">
     <div class="info">
-      <h3>Time Quest</h3>
+      <h3>Fantasy World</h3>
+      <p><strong>Género:</strong> RPG / Aventura</p>
+      <p><strong>Plataforma:</strong> PC, Consolas</p>
       <p>
-        <strong>Género:</strong> Aventura / RPG<br>
-        <strong>Plataforma:</strong> PC
-      </p>
-      <p>
-        Un viaje a través del tiempo donde cada
-        decisión influye en la historia.
+        Explora un mundo mágico lleno de criaturas, misiones y batallas épicas.
       </p>
     </div>
   </div>
 
 </section>
 
-<div id="footer"></div>
-
-<script>
-  fetch("includes/header.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("header").innerHTML = data);
-
-  fetch("includes/footer.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
-</script>
+<footer>
+  © 2026 - Catálogo Gamer | Página informativa
+</footer>
 
 </body>
 </html>
