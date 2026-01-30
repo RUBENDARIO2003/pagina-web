@@ -1,27 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo Gamer</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
 <div id="header"></div>
 
 <section class="hero">
-  <h1>🎮 Página Web Gamer</h1>
+  <h1>🎮 Catálogo de Juegos Gamer</h1>
   <p>
-    Proyecto web de poesía moderna<br>
-    combinando literatura y diseño gamer.
+    Explora los mejores juegos<br>
+    con un estilo gamer neón
   </p>
 </section>
 
-<div class="card">
-  <img src="assets/img/gamer-bg.jpg" alt="Arte gamer">
-  <div class="texto">
-    <h2>Sobre el proyecto</h2>
-    <p>
-      Esta página fue creada usando <strong>HTML y CSS</strong>,
-      publicada en <strong>GitHub Pages</strong> y diseñada
-      con un estilo gamer oscuro y luces neón.
-    </p>
-    <p>
-      Cada poema representa una etapa:
-      inicio, reflexión y paso del tiempo.
-    </p>
+<section class="catalogo">
+
+  <div class="game-card">
+    <img src="assets/img/game1.jpg" alt="Juego 1">
+    <div class="info">
+      <h3>Cyber Battle</h3>
+      <p>Acción futurista en un mundo cibernético.</p>
+      <div class="precio">S/ 120.00</div>
+      <a href="poema1.html">Ver más</a>
+    </div>
   </div>
-</div>
+
+  <div class="game-card">
+    <img src="assets/img/game2.jpg" alt="Juego 2">
+    <div class="info">
+      <h3>Night Racer</h3>
+      <p>Carreras extremas bajo luces neón.</p>
+      <div class="precio">S/ 95.00</div>
+      <a href="poema2.html">Ver más</a>
+    </div>
+  </div>
+
+  <div class="game-card">
+    <img src="assets/img/game3.jpg" alt="Juego 3">
+    <div class="info">
+      <h3>Time Quest</h3>
+      <p>Viaja por el tiempo y cambia tu destino.</p>
+      <div class="precio">S/ 150.00</div>
+      <a href="poema3.html">Ver más</a>
+    </div>
+  </div>
+
+</section>
 
 <div id="footer"></div>
+
+<script>
+  fetch("includes/header.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("header").innerHTML = data);
+
+  fetch("includes/footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+</body>
+</html>
