@@ -55,4 +55,12 @@
 .game-card a:hover {
   background: #f0f;
   color: #fff;
+
+  .game-card span {
+  display: block;
+  margin-top: 10px;
+  color: #0f0;
+  font-weight: bold;
+}
+
 }
