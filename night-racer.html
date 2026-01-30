@@ -9,15 +9,26 @@ body{
   background:#020617;
   color:#e5e7eb;
   font-family:Arial;
-  padding:20px;
+  padding:30px;
+  text-align:center;
 }
-h1{color:#38bdf8}
+
+h1{
+  color:#38bdf8;
+  text-shadow:0 0 15px #38bdf8;
+}
+
+img{
+  width:300px;
+  border-radius:15px;
+  box-shadow:0 0 25px #38bdf8;
+}
+
 button{
-  padding:10px;
+  padding:12px 20px;
   background:#38bdf8;
   border:none;
-  border-radius:5px;
-  cursor:pointer;
+  border-radius:8px;
 }
 </style>
 </head>
@@ -25,21 +36,17 @@ button{
 <body>
 
 <h1>Night Racer</h1>
+
+<img src="data:image/png;base64,PEGA_AQUI_TU_BASE64">
+
 <p><strong>Género:</strong> Carreras</p>
 <p><strong>Plataforma:</strong> PC</p>
 
 <p>
-Carreras nocturnas llenas de adrenalina, velocidad extrema
-y pistas iluminadas con luces de neón.
+Velocidad extrema, luces de neón y circuitos nocturnos llenos de adrenalina.
 </p>
 
-<button onclick="volver()">⬅ Volver</button>
-
-<script>
-function volver(){
-  history.back();
-}
-</script>
+<button onclick="history.back()">⬅ Volver</button>
 
 </body>
 </html>
