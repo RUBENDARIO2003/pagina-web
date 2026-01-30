@@ -2,42 +2,107 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Cyber Battle</title>
+<title>Catálogo Gamer</title>
 
 <style>
 body{
+  margin:0;
+  font-family:Arial, sans-serif;
   background:#020617;
   color:#e5e7eb;
-  font-family:Arial;
-  padding:20px;
 }
-h1{color:#38bdf8}
+
+header{
+  text-align:center;
+  padding:30px;
+}
+
+header h1{
+  color:#38bdf8;
+  text-shadow:0 0 15px #38bdf8;
+}
+
+.catalogo{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  padding:30px;
+}
+
+.card{
+  background:#020617;
+  border:2px solid #38bdf8;
+  border-radius:12px;
+  padding:20px;
+  box-shadow:0 0 15px rgba(56,189,248,.5);
+  transition:.4s;
+  animation:flotar 3s infinite alternate;
+}
+
+.card:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 30px #38bdf8;
+}
+
+@keyframes flotar{
+  from{transform:translateY(0)}
+  to{transform:translateY(-8px)}
+}
+
+.card h3{
+  color:#38bdf8;
+  text-shadow:0 0 10px #38bdf8;
+}
+
 button{
-  padding:10px;
+  margin-top:15px;
+  width:100%;
+  padding:12px;
   background:#38bdf8;
   border:none;
-  border-radius:5px;
+  border-radius:8px;
+  font-weight:bold;
   cursor:pointer;
+}
+
+button:hover{
+  background:#0ea5e9;
 }
 </style>
 </head>
 
 <body>
 
-<h1>Cyber Battle</h1>
-<p><strong>Género:</strong> Acción / Ciencia ficción</p>
-<p><strong>Plataforma:</strong> PC y Consolas</p>
+<header>
+  <h1>🎮 Catálogo Gamer</h1>
+  <p>Los 3 juegos más populares</p>
+</header>
 
-<p>
-Juego ambientado en un mundo futurista donde la tecnología,
-la estrategia y la acción se combinan en intensas batallas.
-</p>
+<section class="catalogo">
 
-<button onclick="volver()">⬅ Volver</button>
+<div class="card">
+  <h3>Cyber Battle</h3>
+  <p>Acción futurista y estrategia.</p>
+  <button onclick="ir('cyber-battle.html')">Ver juego</button>
+</div>
+
+<div class="card">
+  <h3>Night Racer</h3>
+  <p>Carreras nocturnas extremas.</p>
+  <button onclick="ir('night-racer.html')">Ver juego</button>
+</div>
+
+<div class="card">
+  <h3>Fantasy World</h3>
+  <p>Aventura épica RPG.</p>
+  <button onclick="ir('fantasy-world.html')">Ver juego</button>
+</div>
+
+</section>
 
 <script>
-function volver(){
-  history.back();
+function ir(p){
+  window.location.href = p;
 }
 </script>
 
