@@ -117,6 +117,23 @@
   </style>
 
 </head>
+          <script>
+        function ir(p){
+          window.location.href = p;
+        }
+        
+        // efecto de escritura gamer
+        let titulo = document.querySelector(".hero h2");
+        let texto = titulo.innerText;
+        titulo.innerText = "";
+        
+        let i=0;
+        let timer = setInterval(()=>{
+          titulo.innerText += texto[i];
+          i++;
+          if(i>=texto.length) clearInterval(timer);
+        },50);
+        </script>
 <body>
 
 <header>
