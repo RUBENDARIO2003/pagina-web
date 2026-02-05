@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catálogo Gamer</title>
+
   <style>
-    /* Reset básico */
     * {
       margin: 0;
       padding: 0;
@@ -16,81 +16,66 @@
     body {
       background-color: #000;
       color: #fff;
-      position: relative;
       min-height: 100vh;
     }
+
     .catalogo{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
-  padding:40px;
-}
-
-.card{
-  background:#020617;
-  border:2px solid #38bdf8;
-  border-radius:12px;
-  padding:20px;
-  box-shadow:0 0 15px rgba(56,189,248,.5);
-  transition:.4s;
-}
-
-.card h3{
-  color:#38bdf8;
-}
-
-.card button{
-  margin-top:10px;
-  width:100%;
-  padding:10px;
-  background:#38bdf8;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
-}
-
-    /* Fondo animado */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background:
-        radial-gradient(circle at top, rgba(56,189,248,.15), transparent),
-        radial-gradient(circle at bottom, rgba(14,165,233,.1), transparent);
-      z-index: -1;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+      padding:40px;
     }
 
-    /* Header básico */
+    .card{
+      background:#020617;
+      border:2px solid #38bdf8;
+      border-radius:12px;
+      padding:20px;
+      box-shadow:0 0 15px rgba(56,189,248,.5);
+      transition:.4s;
+      text-align:center;
+    }
+
+    .card:hover{
+      transform: scale(1.05);
+    }
+
+    .card h3{
+      color:#38bdf8;
+      margin-bottom:10px;
+    }
+
+    .card button{
+      margin-top:10px;
+      width:100%;
+      padding:10px;
+      background:#38bdf8;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
     header {
       padding: 20px;
       text-align: center;
       background-color: #0f172a;
       color: #38bdf8;
       font-size: 24px;
-      font-weight: bold;
       border-bottom: 2px solid #38bdf8;
     }
 
-    /* HERO GRANDE */
     .hero {
       text-align: center;
       padding: 80px 20px;
-      background: radial-gradient(circle, #020617, #000);
     }
 
     .hero h2 {
       font-size: 36px;
       color: #38bdf8;
       text-shadow: 0 0 20px #38bdf8;
-      margin-bottom: 20px;
     }
 
-    .hero p {
-      font-size: 18px;
-      color: #94a3b8;
-    }
-
-    /* ESTADÍSTICAS GAMER */
     .stats {
       display: flex;
       justify-content: center;
@@ -99,39 +84,6 @@
       text-align: center;
     }
 
-    .stats h3 {
-      font-size: 32px;
-      color: #38bdf8;
-      text-shadow: 0 0 15px #38bdf8;
-      margin-bottom: 10px;
-    }
-
-    .stats p {
-      color: #94a3b8;
-      font-size: 16px;
-    }
-
-    /* SECCIÓN INFORMATIVA */
-    .info-extra {
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .info-extra h2 {
-      color: #38bdf8;
-      text-shadow: 0 0 15px #38bdf8;
-      margin-bottom: 20px;
-    }
-
-    .info-extra p {
-      font-size: 17px;
-      color: #cbd5f5;
-      line-height: 1.6;
-    }
-
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 30px;
@@ -139,25 +91,21 @@
       color: #64748b;
       background-color: #0f172a;
     }
-
-    footer p {
-      margin: 5px 0;
-    }
   </style>
+
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    Catálogo Gamer
-  </header>
+<header>
+  Catálogo Gamer
+</header>
 
-  <!-- HERO GRANDE -->
-  <section class="hero">
-    <h2>Explora los mejores juegos del momento</h2>
-    <p>Acción, supervivencia y aventura en un solo catálogo gamer.</p>
-  </section>
+<section class="hero">
+  <h2>Explora los mejores juegos del momento</h2>
+  <p>Acción, supervivencia y aventura en un solo catálogo gamer.</p>
+</section>
 
+<!-- ✅ CATÁLOGO CORRECTO -->
 <section class="catalogo">
 
 <div class="card">
@@ -180,39 +128,32 @@
 
 </section>
 
-
+<section class="stats">
+  <div>
+    <h3>+10M</h3>
+    <p>Jugadores activos</p>
+  </div>
+  <div>
+    <h3>3</h3>
+    <p>Juegos destacados</p>
+  </div>
+  <div>
+    <h3>24/7</h3>
+    <p>Diversión asegurada</p>
+  </div>
 </section>
-  <!-- ESTADÍSTICAS GAMER -->
-  <section class="stats">
-    <div>
-      <h3>+10M</h3>
-      <p>Jugadores activos</p>
-    </div>
-    <div>
-      <h3>3</h3>
-      <p>Juegos destacados</p>
-    </div>
-    <div>
-      <h3>24/7</h3>
-      <p>Diversión asegurada</p>
-    </div>
-  </section>
 
-  <!-- SECCIÓN INFORMATIVA -->
-  <section class="info-extra">
-    <h2>¿Por qué estos juegos?</h2>
-    <p>
-      Estos títulos destacan por su jugabilidad, gráficos y
-      experiencia inmersiva. Cada uno ofrece mundos únicos,
-      desafíos constantes y horas de entretenimiento.
-    </p>
-  </section>
+<footer>
+  <p>© 2026 | Catálogo Gamer</p>
+  <p>Página informativa de videojuegos</p>
+</footer>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 | Catálogo Gamer</p>
-    <p>Página informativa de videojuegos</p>
-  </footer>
+<!-- ✅ JAVASCRIPT QUE TE FALTABA -->
+<script>
+function ir(pagina){
+  window.location.href = pagina;
+}
+</script>
 
 </body>
 </html>
