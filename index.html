@@ -140,6 +140,36 @@ function ir(p){
   window.location.href = p;
 }
 </script>
+  <!-- BOTÓN DE PAGO -->
+<div style="text-align:center; margin:40px;">
+  <button onclick="descargarPDF()" class="btn-pago">
+    💳 REALIZAR PAGO
+  </button>
+</div>
+
+<style>
+.btn-pago{
+  background:#38bdf8;
+  color:black;
+  font-size:20px;
+  padding:15px 40px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  box-shadow:0 0 15px #38bdf8;
+  transition:.3s;
+}
+
+.btn-pago:hover{
+  transform:scale(1.1);
+}
+</style>
+
+<script>
+function descargarPDF(){
+  window.location.href = "pago.pdf";
+}
+</script>
 <body>
 
 <header>
